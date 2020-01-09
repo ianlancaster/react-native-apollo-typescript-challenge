@@ -1,6 +1,19 @@
 module.exports = {
   root: true,
-  extends: '@react-native-community',
+  env: {
+    jest: true,
+  },
+  extends: [
+    'standard',
+    'standard-react'
+  ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  plugins: [
+    '@typescript-eslint',
+    'react'
+  ],
+  rules: {
+    "react/jsx-indent" : ["error", 2],
+    "comma-dangle": ["error", "always-multiline"]
+  }
 };
