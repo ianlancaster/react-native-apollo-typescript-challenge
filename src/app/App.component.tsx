@@ -1,14 +1,7 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
+import 'cross-fetch/polyfill'
 import React from 'react'
+import ApolloClient, { gql } from 'apollo-boost'
+import { ApolloProvider, useQuery } from '@apollo/react-hooks'
 
 import {
   SafeAreaView,
@@ -18,63 +11,51 @@ import {
   StatusBar,
 } from 'react-native'
 
-import {
-  Header,
-  LearnMoreLinks,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen'
-
 import styles from './App.styles'
 
-declare var global: { HermesInternal: null | {} }
+const client = new ApolloClient({
+  uri: 'https://us1.prisma.sh/public-luckox-377/reservation-graphql-backend/dev',
+})
+
+const RESERVATIONS = gql`
+  {
+    reservations(orderBy: arrivalDate_ASC) {
+      id,
+      name,
+      hotelName,
+      arrivalDate,
+      departureDate
+    }
+  }
+`
+
+const Inner = () => {
+  const { loading, error, data } = useQuery(RESERVATIONS)
+  if (loading) return <Text>...loading</Text>
+  if (error) console.log(error.message)
+  console.log(data)
+  return (
+    <View>
+      {data.reservations.map((reservation: any) => (
+        <Text key={reservation.id}>{reservation.name}</Text>
+      ))}
+    </View>
+  )
+}
 
 const App = () => {
   return (
-    <>
+    <ApolloProvider client={client}>
       <StatusBar barStyle='dark-content' />
       <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior='automatic'
           style={styles.scrollView}
         >
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.tsx</Text> to change
-                this screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
+          <Inner />
         </ScrollView>
       </SafeAreaView>
-    </>
+    </ApolloProvider>
   )
 }
 
