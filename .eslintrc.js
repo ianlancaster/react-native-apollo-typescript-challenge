@@ -16,4 +16,4 @@ module.exports = {
     "react/jsx-indent" : ["error", 2],
     "comma-dangle": ["error", "always-multiline"]
   }
-};
+}
