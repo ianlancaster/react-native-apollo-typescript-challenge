@@ -1,9 +1,11 @@
 import { StyleSheet } from 'react-native'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
 
+import { primaryBackground } from 'src/styles/colors'
+
 const styles = StyleSheet.create({
   scrollView: {
-    backgroundColor: Colors.lighter,
+    backgroundColor: primaryBackground,
   },
   engine: {
     position: 'absolute',
