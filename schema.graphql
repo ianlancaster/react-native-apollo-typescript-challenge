@@ -1,0 +1,313 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}
+
+"An object with an ID"
+interface Node {
+  "The id of the object."
+  id: ID!
+}
+
+type AggregateReservation {
+  count: Int!
+}
+
+type BatchPayload {
+  "The number of nodes that have been affected by the Batch operation."
+  count: Long!
+}
+
+type Mutation {
+  createReservation(data: ReservationCreateInput!): Reservation!
+  deleteManyReservations(where: ReservationWhereInput): BatchPayload!
+  deleteReservation(where: ReservationWhereUniqueInput!): Reservation
+  updateManyReservations(data: ReservationUpdateManyMutationInput!, where: ReservationWhereInput): BatchPayload!
+  updateReservation(data: ReservationUpdateInput!, where: ReservationWhereUniqueInput!): Reservation
+  upsertReservation(create: ReservationCreateInput!, update: ReservationUpdateInput!, where: ReservationWhereUniqueInput!): Reservation!
+}
+
+"Information about pagination in a connection."
+type PageInfo {
+  "When paginating forwards, the cursor to continue."
+  endCursor: String
+  "When paginating forwards, are there more items?"
+  hasNextPage: Boolean!
+  "When paginating backwards, are there more items?"
+  hasPreviousPage: Boolean!
+  "When paginating backwards, the cursor to continue."
+  startCursor: String
+}
+
+type Query {
+  "Fetches an object given its ID"
+  node(
+    #The ID of an object
+    id: ID!
+  ): Node
+  reservation(where: ReservationWhereUniqueInput!): Reservation
+  reservations(after: String, before: String, first: Int, last: Int, orderBy: ReservationOrderByInput, skip: Int, where: ReservationWhereInput): [Reservation]!
+  reservationsConnection(after: String, before: String, first: Int, last: Int, orderBy: ReservationOrderByInput, skip: Int, where: ReservationWhereInput): ReservationConnection!
+}
+
+type Reservation implements Node {
+  arrivalDate: String!
+  departureDate: String!
+  hotelName: String!
+  id: ID!
+  name: String!
+}
+
+"A connection to a list of items."
+type ReservationConnection {
+  aggregate: AggregateReservation!
+  "A list of edges."
+  edges: [ReservationEdge]!
+  "Information to aid in pagination."
+  pageInfo: PageInfo!
+}
+
+"An edge in a connection."
+type ReservationEdge {
+  "A cursor for use in pagination."
+  cursor: String!
+  "The item at the end of the edge."
+  node: Reservation!
+}
+
+type ReservationPreviousValues {
+  arrivalDate: String!
+  departureDate: String!
+  hotelName: String!
+  id: ID!
+  name: String!
+}
+
+type ReservationSubscriptionPayload {
+  mutation: MutationType!
+  node: Reservation
+  previousValues: ReservationPreviousValues
+  updatedFields: [String!]
+}
+
+type Subscription {
+  reservation(where: ReservationSubscriptionWhereInput): ReservationSubscriptionPayload
+}
+
+enum MutationType {
+  CREATED
+  DELETED
+  UPDATED
+}
+
+enum ReservationOrderByInput {
+  arrivalDate_ASC
+  arrivalDate_DESC
+  createdAt_ASC
+  createdAt_DESC
+  departureDate_ASC
+  departureDate_DESC
+  hotelName_ASC
+  hotelName_DESC
+  id_ASC
+  id_DESC
+  name_ASC
+  name_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+}
+
+input ReservationCreateInput {
+  arrivalDate: String!
+  departureDate: String!
+  hotelName: String!
+  id: ID
+  name: String!
+}
+
+input ReservationSubscriptionWhereInput {
+  "Logical AND on all given filters."
+  AND: [ReservationSubscriptionWhereInput!]
+  "Logical NOT on all given filters combined by AND."
+  NOT: [ReservationSubscriptionWhereInput!]
+  "Logical OR on all given filters."
+  OR: [ReservationSubscriptionWhereInput!]
+  "The subscription event gets dispatched when it's listed in mutation_in"
+  mutation_in: [MutationType!]
+  node: ReservationWhereInput
+  "The subscription event gets only dispatched when one of the updated fields names is included in this list"
+  updatedFields_contains: String
+  "The subscription event gets only dispatched when all of the field names included in this list have been updated"
+  updatedFields_contains_every: [String!]
+  "The subscription event gets only dispatched when some of the field names included in this list have been updated"
+  updatedFields_contains_some: [String!]
+}
+
+input ReservationUpdateInput {
+  arrivalDate: String
+  departureDate: String
+  hotelName: String
+  name: String
+}
+
+input ReservationUpdateManyMutationInput {
+  arrivalDate: String
+  departureDate: String
+  hotelName: String
+  name: String
+}
+
+input ReservationWhereInput {
+  "Logical AND on all given filters."
+  AND: [ReservationWhereInput!]
+  "Logical NOT on all given filters combined by AND."
+  NOT: [ReservationWhereInput!]
+  "Logical OR on all given filters."
+  OR: [ReservationWhereInput!]
+  arrivalDate: String
+  "All values containing the given string."
+  arrivalDate_contains: String
+  "All values ending with the given string."
+  arrivalDate_ends_with: String
+  "All values greater than the given value."
+  arrivalDate_gt: String
+  "All values greater than or equal the given value."
+  arrivalDate_gte: String
+  "All values that are contained in given list."
+  arrivalDate_in: [String!]
+  "All values less than the given value."
+  arrivalDate_lt: String
+  "All values less than or equal the given value."
+  arrivalDate_lte: String
+  "All values that are not equal to given value."
+  arrivalDate_not: String
+  "All values not containing the given string."
+  arrivalDate_not_contains: String
+  "All values not ending with the given string."
+  arrivalDate_not_ends_with: String
+  "All values that are not contained in given list."
+  arrivalDate_not_in: [String!]
+  "All values not starting with the given string."
+  arrivalDate_not_starts_with: String
+  "All values starting with the given string."
+  arrivalDate_starts_with: String
+  departureDate: String
+  "All values containing the given string."
+  departureDate_contains: String
+  "All values ending with the given string."
+  departureDate_ends_with: String
+  "All values greater than the given value."
+  departureDate_gt: String
+  "All values greater than or equal the given value."
+  departureDate_gte: String
+  "All values that are contained in given list."
+  departureDate_in: [String!]
+  "All values less than the given value."
+  departureDate_lt: String
+  "All values less than or equal the given value."
+  departureDate_lte: String
+  "All values that are not equal to given value."
+  departureDate_not: String
+  "All values not containing the given string."
+  departureDate_not_contains: String
+  "All values not ending with the given string."
+  departureDate_not_ends_with: String
+  "All values that are not contained in given list."
+  departureDate_not_in: [String!]
+  "All values not starting with the given string."
+  departureDate_not_starts_with: String
+  "All values starting with the given string."
+  departureDate_starts_with: String
+  hotelName: String
+  "All values containing the given string."
+  hotelName_contains: String
+  "All values ending with the given string."
+  hotelName_ends_with: String
+  "All values greater than the given value."
+  hotelName_gt: String
+  "All values greater than or equal the given value."
+  hotelName_gte: String
+  "All values that are contained in given list."
+  hotelName_in: [String!]
+  "All values less than the given value."
+  hotelName_lt: String
+  "All values less than or equal the given value."
+  hotelName_lte: String
+  "All values that are not equal to given value."
+  hotelName_not: String
+  "All values not containing the given string."
+  hotelName_not_contains: String
+  "All values not ending with the given string."
+  hotelName_not_ends_with: String
+  "All values that are not contained in given list."
+  hotelName_not_in: [String!]
+  "All values not starting with the given string."
+  hotelName_not_starts_with: String
+  "All values starting with the given string."
+  hotelName_starts_with: String
+  id: ID
+  "All values containing the given string."
+  id_contains: ID
+  "All values ending with the given string."
+  id_ends_with: ID
+  "All values greater than the given value."
+  id_gt: ID
+  "All values greater than or equal the given value."
+  id_gte: ID
+  "All values that are contained in given list."
+  id_in: [ID!]
+  "All values less than the given value."
+  id_lt: ID
+  "All values less than or equal the given value."
+  id_lte: ID
+  "All values that are not equal to given value."
+  id_not: ID
+  "All values not containing the given string."
+  id_not_contains: ID
+  "All values not ending with the given string."
+  id_not_ends_with: ID
+  "All values that are not contained in given list."
+  id_not_in: [ID!]
+  "All values not starting with the given string."
+  id_not_starts_with: ID
+  "All values starting with the given string."
+  id_starts_with: ID
+  name: String
+  "All values containing the given string."
+  name_contains: String
+  "All values ending with the given string."
+  name_ends_with: String
+  "All values greater than the given value."
+  name_gt: String
+  "All values greater than or equal the given value."
+  name_gte: String
+  "All values that are contained in given list."
+  name_in: [String!]
+  "All values less than the given value."
+  name_lt: String
+  "All values less than or equal the given value."
+  name_lte: String
+  "All values that are not equal to given value."
+  name_not: String
+  "All values not containing the given string."
+  name_not_contains: String
+  "All values not ending with the given string."
+  name_not_ends_with: String
+  "All values that are not contained in given list."
+  name_not_in: [String!]
+  "All values not starting with the given string."
+  name_not_starts_with: String
+  "All values starting with the given string."
+  name_starts_with: String
+}
+
+input ReservationWhereUniqueInput {
+  id: ID
+}
+
+
+"The `Long` scalar type represents non-fractional signed whole numeric values. Long can represent values between -(2^63) and 2^63 - 1."
+scalar Long
