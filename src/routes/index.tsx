@@ -1,13 +1,13 @@
 import { createAppContainer } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
-import Bookings from './bookings'
+import Reservations from './reservations'
 
 const Routes = createStackNavigator({
-  Bookings: {
-    screen: Bookings,
+  Reservations: {
+    screen: Reservations,
   },
 }, {
-  initialRouteName: 'Bookings',
+  initialRouteName: 'Reservations',
 })
 
 export default createAppContainer(Routes)

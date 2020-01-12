@@ -15,7 +15,7 @@ const RESERVATIONS = gql`
   }
 `
 
-const Bookings = () => {
+const Reservations = () => {
   const { loading, error, data } = useQuery(RESERVATIONS)
   if (loading) return <Text>...loading</Text>
   if (error) console.log(error.message)
@@ -29,4 +29,4 @@ const Bookings = () => {
   )
 }
 
-export default Bookings
+export default Reservations
