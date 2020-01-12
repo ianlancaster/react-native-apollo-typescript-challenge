@@ -2,8 +2,8 @@ import { gql } from 'apollo-boost'
 import { useQuery } from '@apollo/react-hooks'
 import { Text, View } from 'react-native'
 import React from 'react'
+import { ReservationOrderByInput } from 'types/GlobalGraphTypes'
 import { GetReservationsData, GetReservationsDataVariables } from './graphTypes/GetReservationsData'
-import { ReservationOrderByInput } from 'src/types/GlobalGraphTypes'
 
 const GET_RESERVATIONS = gql`
   query GetReservationsData($orderBy: ReservationOrderByInput) {
