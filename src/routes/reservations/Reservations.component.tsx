@@ -1,8 +1,11 @@
+import React from 'react'
 import { gql } from 'apollo-boost'
 import { useQuery } from '@apollo/react-hooks'
-import { Text, View } from 'react-native'
-import React from 'react'
+import { FlatList, Text, View } from 'react-native'
+import ReservationCard from 'components/ReservationCard'
+
 import { ReservationOrderByInput } from 'types/GlobalGraphTypes'
+import { Reservation } from 'models'
 import { GetReservationsData, GetReservationsDataVariables } from './graphTypes/GetReservationsData'
 
 const GET_RESERVATIONS = gql`
@@ -27,12 +30,22 @@ const Reservations = () => {
 
   if (error) console.log(error.message)
 
+  const reservations = data.reservations.filter(reservation => (
+    reservation
+    && reservation.id
+    && reservation.name
+    && reservation.hotelName
+    && reservation.arrivalDate
+    && reservation.departureDate
+  )) as Reservation[]
+
   return (
-    <View>
-      {data.reservations.map((reservation: any) => (
-        <Text key={reservation.id}>{reservation.name}</Text>
-      ))}
-    </View>
+    <FlatList
+      data={reservations}
+      renderItem={({ item }: { item: Reservation }) => (
+        <ReservationCard {...item} />
+      )}
+    />
   )
 }
 

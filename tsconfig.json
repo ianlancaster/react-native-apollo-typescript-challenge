@@ -41,6 +41,10 @@
     "paths": {
       "app": ["src/app"],
       "app/*": ["src/app/*"],
+      "components": ["src/components"],
+      "components/*": ["src/components/*"],
+      "models": ["src/models"],
+      "models/*": ["src/models/*"],
       "routes": ["src/routes"],
       "routes/*": ["src/routes/*"],
       "styles": ["src/styles"],
