@@ -13,7 +13,8 @@ module.exports = {
     'react'
   ],
   rules: {
-    "react/jsx-indent" : ["error", 2],
-    "comma-dangle": ["error", "always-multiline"]
+    "react/jsx-indent": ["error", 2],
+    "comma-dangle": ["error", "always-multiline"],
+    "no-unused-vars": "warn"
   }
 }

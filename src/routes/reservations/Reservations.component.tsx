@@ -2,6 +2,8 @@ import { gql } from 'apollo-boost'
 import { useQuery } from '@apollo/react-hooks'
 import { Text, View } from 'react-native'
 import React from 'react'
+import { GetReservationsData, GetReservationsDataVariables } from './graphTypes/GetReservationsData'
+import { ReservationOrderByInput } from 'src/types/GlobalGraphTypes'
 
 const GET_RESERVATIONS = gql`
   query GetReservationsData($orderBy: ReservationOrderByInput) {
@@ -16,12 +18,12 @@ const GET_RESERVATIONS = gql`
 `
 
 const Reservations = () => {
-  const { loading, error, data } = useQuery(
+  const { loading, error, data } = useQuery<GetReservationsData, GetReservationsDataVariables>(
     GET_RESERVATIONS,
-    { variables: { orderBy: 'arrivalDate_ASC' } },
+    { variables: { orderBy: ReservationOrderByInput.arrivalDate_ASC } },
   )
 
-  if (loading) return <Text>...loading</Text>
+  if (loading || !data) return <Text>...loading</Text>
 
   if (error) console.log(error.message)
 
