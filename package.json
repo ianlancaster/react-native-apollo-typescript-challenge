@@ -9,8 +9,8 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "format": "eslint . --fix --ext .js,.jsx,.ts,.tsx",
-    "apollo:generate": "apollo codegen:generate graphTypes --excludes=node_moudels/* --includes=**/*.{ts,tsx} --endpoint https://us1.prisma.sh/public-luckox-377/reservation-graphql-backend/dev --target typescript --tagName=gql --globalTypesFile=src/types/GlobalGraphTypes.ts",
-    "apollo:download": "apollo client:download-schema schema.graphql --excludes=node_moudels/* --includes=**/*.{ts,tsx} --endpoint https://us1.prisma.sh/public-luckox-377/reservation-graphql-backend/dev --tagName=gql"
+    "apollo:generate": "apollo codegen:generate graphTypes --excludes=node_moudels/* --includes=**/*.tsx --endpoint https://us1.prisma.sh/public-luckox-377/reservation-graphql-backend/dev --target typescript --tagName=gql --globalTypesFile=src/types/GlobalGraphTypes.ts",
+    "apollo:download": "apollo client:download-schema schema.graphql --excludes=node_moudels/* --includes=**/*.tsx --endpoint https://us1.prisma.sh/public-luckox-377/reservation-graphql-backend/dev --tagName=gql"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.3",
