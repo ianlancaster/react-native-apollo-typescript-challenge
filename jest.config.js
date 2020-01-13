@@ -1,15 +1,15 @@
 module.exports = {
   preset: 'react-native',
   transformIgnorePatterns: [
-    'node_modules/(?!((jest-)?' +
-    'react-native' +
-    '|react-clone-referenced-element' +
-    '|expo(nent)?' +
-    '|@expo(nent)?/.*' +
-    '|react-navigation' +
-    '|@react-navigation/.*' +
-    '|native-base' +
-    '|@react-native-community/masked-view))',
+    'node_modules/(?!((jest-)?'
+    + 'react-native'
+    + '|react-clone-referenced-element'
+    + '|expo(nent)?'
+    + '|@expo(nent)?/.*'
+    + '|react-navigation'
+    + '|@react-navigation/.*'
+    + '|native-base'
+    + '|@react-native-community/masked-view))',
   ],
   moduleFileExtensions: [
     'ts',
