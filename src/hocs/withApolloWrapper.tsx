@@ -1,7 +1,9 @@
 import React from 'react'
 
-function withApolloWrapper<Props> (Component: React.ComponentType<Props>) {
-  return (props: Props) => {
+function withApolloWrapper<TProps> (
+  Component: React.ComponentType<TProps>,
+) {
+  return (props: TProps) => {
     return <Component {...props} />
   }
 }
