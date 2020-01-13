@@ -1,43 +1,19 @@
 import React from 'react'
-import { gql } from 'apollo-boost'
-import { useQuery } from '@apollo/react-hooks'
 import { FlatList, Text, View } from 'react-native'
 import ReservationCard from 'components/ReservationCard'
+import { useReservations } from './Reservations.queries'
+import { filterIncompleteReservations } from './Reservations.selectors'
 
-import { ReservationOrderByInput } from 'types/GlobalGraphTypes'
-import { Reservation } from 'models'
-import { GetReservationsData, GetReservationsDataVariables } from './graphTypes/GetReservationsData'
-
-const GET_RESERVATIONS = gql`
-  query GetReservationsData($orderBy: ReservationOrderByInput) {
-    reservations(orderBy: $orderBy) {
-      id,
-      name,
-      hotelName,
-      arrivalDate,
-      departureDate
-    }
-  }
-`
+import { Reservation } from 'types/models'
 
 const Reservations = () => {
-  const { loading, error, data } = useQuery<GetReservationsData, GetReservationsDataVariables>(
-    GET_RESERVATIONS,
-    { variables: { orderBy: ReservationOrderByInput.arrivalDate_ASC } },
-  )
+  const { loading, error, data } = useReservations()
 
   if (loading || !data) return <Text>...loading</Text>
 
   if (error) console.log(error.message)
 
-  const reservations = data.reservations.filter(reservation => (
-    reservation
-    && reservation.id
-    && reservation.name
-    && reservation.hotelName
-    && reservation.arrivalDate
-    && reservation.departureDate
-  )) as Reservation[]
+  const reservations = filterIncompleteReservations(data)
 
   return (
     <FlatList

@@ -1,6 +1,6 @@
-import { Reservation } from 'models'
-import { Text, View } from 'react-native'
 import React from 'react'
+import { Text, View } from 'react-native'
+import { Reservation } from 'types/models'
 
 const ReservationCard = (reservation: Reservation) => (
   <View key={reservation.id}>

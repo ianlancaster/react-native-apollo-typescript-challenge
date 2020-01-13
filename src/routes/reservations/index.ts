@@ -1,1 +1,1 @@
-export { default } from './Reservations.component'
+export { default } from './Reservations.container'
