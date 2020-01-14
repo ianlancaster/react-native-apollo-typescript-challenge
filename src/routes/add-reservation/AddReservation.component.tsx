@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/react-hooks'
 import { NavigationStackScreenComponent } from 'react-navigation-stack'
 
 const GET_TEST_STATE = gql`
-  query App {
+  query GetTestState {
     test @client
   }
 `

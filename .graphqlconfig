@@ -1,6 +1,6 @@
 {
   "name": "Reservations GraphQL Schema",
-  "schemaPath": "schema.graphql",
+  "schemaPath": "src/store/schema.graphql",
   "extensions": {
     "endpoints": {
       "Default GraphQL Endpoint": {
