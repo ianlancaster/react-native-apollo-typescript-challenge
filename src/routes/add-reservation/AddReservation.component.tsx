@@ -1,33 +1,21 @@
 import React from 'react'
 import { Text, TextInput } from 'react-native'
-import { useQuery } from '@apollo/react-hooks'
 import { NavigationStackScreenComponent } from 'react-navigation-stack'
-import { GET_NEW_RESERVATION } from './AddReservation.queries'
-import { GetNewReservationState } from './graphTypes/GetNewReservationState'
+import { useGetNewReservation } from './AddReservation.queries'
+import { useUpdateNewReservation } from './AddReservation.mutations'
 
 const AddReservation: NavigationStackScreenComponent = () => {
-  const { data, client } = useQuery<GetNewReservationState>(GET_NEW_RESERVATION)
+  const { data } = useGetNewReservation()
   if (!data) return <Text>Not Found.</Text>
-  const { AddReservationScreen: { newReservation } } = data
-  const updateNewReservation = (target: string, text: string) => ({
-    data: {
-      ...data,
-      AddReservationScreen: {
-        ...data.AddReservationScreen,
-        newReservation: {
-          ...newReservation,
-          hotelName: text,
-        },
-      },
-    },
-  })
+  const { screenState: { newReservation } } = data
+  const [updateNewReservation] = useUpdateNewReservation()
 
   return (
     <>
       <Text>Add a reservation</Text>
       <TextInput
         value={newReservation.hotelName}
-        onChangeText={text => client.writeData(updateNewReservation('hotelName', text))}
+        onChangeText={text => updateNewReservation({ variables: { target: 'hotelName', text } })}
       />
     </>
   )

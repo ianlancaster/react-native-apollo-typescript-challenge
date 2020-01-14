@@ -1,8 +1,10 @@
 import { gql } from 'apollo-boost'
+import { useQuery } from '@apollo/react-hooks'
+import { GetNewReservationState } from './graphTypes/GetNewReservationState'
 
 export const GET_NEW_RESERVATION = gql`
   query GetNewReservationState {
-    AddReservationScreen {
+    screenState: AddReservationScreen @client {
       newReservation {
         hotelName,
         name,
@@ -13,3 +15,5 @@ export const GET_NEW_RESERVATION = gql`
     }
   }
 `
+
+export const useGetNewReservation = () => useQuery<GetNewReservationState>(GET_NEW_RESERVATION)

@@ -6,7 +6,7 @@
 // GraphQL query operation: GetNewReservationState
 // ====================================================
 
-export interface GetNewReservationState_AddReservationScreen_newReservation {
+export interface GetNewReservationState_screenState_newReservation {
   __typename: "Reservation";
   hotelName: string;
   name: string;
@@ -15,11 +15,11 @@ export interface GetNewReservationState_AddReservationScreen_newReservation {
   id: string;
 }
 
-export interface GetNewReservationState_AddReservationScreen {
+export interface GetNewReservationState_screenState {
   __typename: "AddReservationScreenState";
-  newReservation: GetNewReservationState_AddReservationScreen_newReservation;
+  newReservation: GetNewReservationState_screenState_newReservation;
 }
 
 export interface GetNewReservationState {
-  AddReservationScreen: GetNewReservationState_AddReservationScreen;
+  screenState: GetNewReservationState_screenState;
 }
