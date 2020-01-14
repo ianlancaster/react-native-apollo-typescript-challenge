@@ -1,5 +1,6 @@
+import { NavigationStackScreenProps } from 'react-navigation-stack'
 import { GetReservationsData } from './graphTypes/GetReservationsData'
 
-export interface ReservationsProps {
+export type ReservationsProps = NavigationStackScreenProps & {
   data: GetReservationsData
 }

@@ -3,7 +3,7 @@ import { ActivityIndicator } from 'react-native'
 import { darkBlue } from 'styles/colors'
 import styles from './DefaultLoader.styles'
 
-const DefaultLoader = () => (
+const DefaultLoader: React.FC = () => (
   <ActivityIndicator
     size='large'
     color={darkBlue}
