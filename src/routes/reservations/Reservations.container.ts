@@ -13,5 +13,5 @@ export default withApolloWrapper<
 >(
   Reservations,
   GET_RESERVATIONS,
-  { variables: { orderBy: ReservationOrderByInput.arrivalDate_ASC } },
+  { variables: { orderBy: ReservationOrderByInput.updatedAt_DESC } },
 )
