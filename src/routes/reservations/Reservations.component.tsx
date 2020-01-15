@@ -7,7 +7,7 @@ import { filterIncompleteReservations } from './Reservations.selectors'
 import styles from './Reservations.styles'
 import { ReservationsProps } from './Reservations.types'
 
-const Reservations: React.FC<ReservationsProps> = ({
+const Reservations: React.FC<ReservationsProps> = React.memo(({
   data,
   navigation,
 }) => {
@@ -28,6 +28,6 @@ const Reservations: React.FC<ReservationsProps> = ({
       />
     </>
   )
-}
+})
 
 export default Reservations
