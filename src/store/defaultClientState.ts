@@ -3,7 +3,7 @@ const defaultClientState = {
     __typename: 'AddReservationScreen',
     newReservation: {
       id: '0',
-      hotelName: 'Grande Hilton',
+      hotelName: '',
       name: '',
       arrivalDate: '',
       departureDate: '',

@@ -4,6 +4,7 @@ extend type Query {
 
 extend type Mutation {
   updateNewReservation(target: String, text: String): Reservation!
+  resetNewReservation: Reservation!
 }
 
 type AddReservationScreenState {

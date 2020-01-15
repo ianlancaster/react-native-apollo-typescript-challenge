@@ -2,6 +2,7 @@ import { ApolloCache } from 'apollo-cache'
 import { Resolvers as BaseResolvers } from 'apollo-client'
 import { GET_NEW_RESERVATION } from 'routes/add-reservation/AddReservation.queries'
 import { GetNewReservationState } from 'routes/add-reservation/graphTypes/GetNewReservationState'
+import defaultClientState from 'store/defaultClientState'
 
 type ResolverContext = {
   cache: ApolloCache<any>
@@ -39,6 +40,24 @@ const resolvers: Resolvers = {
               ...newReservation,
               [target]: text,
             },
+          },
+        }
+
+        cache.writeQuery({ query: GET_NEW_RESERVATION, data })
+
+        return data.screenState.newReservation
+      }
+    },
+    resetNewReservation: (parent, args, { cache }) => {
+      const queryResult = cache.readQuery<GetNewReservationState>({ query: GET_NEW_RESERVATION })
+
+      if (queryResult) {
+        const { screenState } = queryResult
+
+        const data = {
+          screenState: {
+            ...screenState,
+            newReservation: defaultClientState.AddReservationScreen.newReservation,
           },
         }
 

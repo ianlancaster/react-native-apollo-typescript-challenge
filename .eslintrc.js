@@ -17,6 +17,7 @@ module.exports = {
     "comma-dangle": ["error", "always-multiline"],
     "no-unused-vars": "off",
     "operator-linebreak": ["error", "before"],
-    "camelcase": "off"
+    "camelcase": "off",
+    "react/prop-types": "off"
   }
 }

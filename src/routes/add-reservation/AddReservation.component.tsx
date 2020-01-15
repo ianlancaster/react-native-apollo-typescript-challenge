@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import { Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { NavigationStackScreenComponent } from 'react-navigation-stack'
 import { useGetNewReservation } from './AddReservation.queries'
-import { useUpdateNewReservation, useCreateReservation } from './AddReservation.mutations'
+import { useUpdateNewReservation, useCreateReservation, useResetNewReservation } from './AddReservation.mutations'
 import styles from './AddReservation.styles'
 import { isCompleteReservation } from 'routes/reservations/Reservations.selectors'
 import { Reservation } from 'types/models'
+import { GET_RESERVATIONS } from 'routes/reservations/Reservations.queries'
+import { GetReservationsData } from 'routes/reservations/graphTypes/GetReservationsData'
+import { ReservationOrderByInput } from 'types/GlobalGraphTypes'
 
 type Target = 'hotelName' | 'name' | 'arrivalDate' | 'departureDate'
 type LabeledInputProps = { label: string, target: Target, newReservation: Reservation }
@@ -30,17 +33,42 @@ const LabeledInput = ({
   )
 }
 
-const AddReservation: NavigationStackScreenComponent = () => {
+const AddReservation: NavigationStackScreenComponent = ({ navigation }) => {
   const { data } = useGetNewReservation()
   if (!data) return <Text>Not Found.</Text>
   const { screenState: { newReservation } } = data
   const [createReservation] = useCreateReservation({ variables: newReservation })
+  const [resetNewReservation] = useResetNewReservation()
   const [showError, setShowError] = useState(false)
 
   const handleAddReservationClick = () => {
     const dataValid = isCompleteReservation(newReservation)
     setShowError(!dataValid)
-    if (dataValid) createReservation()
+    if (dataValid) {
+      createReservation({
+        update: (cache, { data }) => {
+          if (!data) return
+          const { createReservation: newReservation } = data
+          const queryResult = cache.readQuery<GetReservationsData>({
+            query: GET_RESERVATIONS,
+            variables: { orderBy: ReservationOrderByInput.updatedAt_DESC },
+          })
+
+          if (queryResult) {
+            const { reservations } = queryResult
+            cache.writeQuery({
+              query: GET_RESERVATIONS,
+              variables: { orderBy: ReservationOrderByInput.updatedAt_DESC },
+              data: { reservations: [newReservation, ...reservations] },
+            })
+
+            resetNewReservation()
+
+            navigation.navigate('Reservations')
+          }
+        },
+      })
+    }
   }
 
   return (

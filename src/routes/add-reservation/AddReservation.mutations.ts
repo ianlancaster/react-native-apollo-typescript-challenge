@@ -1,10 +1,12 @@
 import { gql } from 'apollo-boost'
 import { useMutation } from '@apollo/react-hooks'
+import { MutationHookOptions } from '@apollo/react-hooks/lib/types'
 import {
   UpdateNewReservation,
   UpdateNewReservationVariables,
 } from './graphTypes/updateNewReservation'
-import { MutationHookOptions } from '@apollo/react-hooks/lib/types'
+import { ResetNewReservation } from './graphTypes/ResetNewReservation'
+import { CreateReservation, CreateReservationVariables } from 'routes/add-reservation/graphTypes/CreateReservation'
 
 export const UPDATE_NEW_RESERVATION = gql`
   mutation UpdateNewReservation($target: String, $text: String) {
@@ -23,6 +25,20 @@ export const useUpdateNewReservation = () => useMutation<
   UpdateNewReservationVariables
 >(UPDATE_NEW_RESERVATION)
 
+export const RESET_NEW_RESERVATION = gql`
+  mutation ResetNewReservation {
+    resetNewReservation @client {
+      hotelName,
+      name,
+      departureDate,
+      arrivalDate,
+      id      
+    }
+  }
+`
+
+export const useResetNewReservation = () => useMutation<ResetNewReservation>(RESET_NEW_RESERVATION)
+
 export const CREATE_RESERVATION = gql`
   mutation CreateReservation(
     $name: String!
@@ -38,11 +54,18 @@ export const CREATE_RESERVATION = gql`
         departureDate: $departureDate
       }
     ) {
+      hotelName,
+      name,
+      departureDate,
+      arrivalDate,
       id
     }
   }
 `
 
-export const useCreateReservation = (options?: MutationHookOptions) => (
-  useMutation(CREATE_RESERVATION, options)
-)
+export const useCreateReservation = (
+  options?: MutationHookOptions<CreateReservation, CreateReservationVariables>,
+) => useMutation<
+  CreateReservation,
+  CreateReservationVariables
+>(CREATE_RESERVATION, options)

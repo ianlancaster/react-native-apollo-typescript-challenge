@@ -23,7 +23,8 @@ export default StyleSheet.create({
     paddingVertical: 10,
     borderWidth: 1,
     borderRadius: 4,
-    borderBottomColor: 'gray',
+    borderColor: 'gray',
+    backgroundColor: 'white',
   },
   errorContainer: {
     justifyContent: 'center',
