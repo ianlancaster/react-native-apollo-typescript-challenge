@@ -1,37 +1,18 @@
 import React, { useState } from 'react'
-import { Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Text, View } from 'react-native'
 import { NavigationStackScreenComponent } from 'react-navigation-stack'
-import { useGetNewReservation } from './AddReservation.queries'
-import { useUpdateNewReservation, useCreateReservation, useResetNewReservation } from './AddReservation.mutations'
-import styles from './AddReservation.styles'
+
+import { ReservationOrderByInput } from 'types/GlobalGraphTypes'
+import PrimaryButton from 'components/PrimaryButton'
+
 import { isCompleteReservation } from 'routes/reservations/Reservations.selectors'
-import { Reservation } from 'types/models'
 import { GET_RESERVATIONS } from 'routes/reservations/Reservations.queries'
 import { GetReservationsData } from 'routes/reservations/graphTypes/GetReservationsData'
-import { ReservationOrderByInput } from 'types/GlobalGraphTypes'
 
-type Target = 'hotelName' | 'name' | 'arrivalDate' | 'departureDate'
-type LabeledInputProps = { label: string, target: Target, newReservation: Reservation }
-const LabeledInput = ({
-  label,
-  target,
-  newReservation,
-}: LabeledInputProps) => {
-  const [updateNewReservation] = useUpdateNewReservation()
-  return (
-    <>
-      <View style={styles.inputLabelContainer}>
-        <Text style={styles.inputLabel}>{label}</Text>
-      </View>
-      <TextInput
-        key={`${target}-input`}
-        style={styles.textInput}
-        value={newReservation[target]}
-        onChangeText={text => updateNewReservation({ variables: { target, text } })}
-      />
-    </>
-  )
-}
+import { useGetNewReservation } from './AddReservation.queries'
+import { useCreateReservation, useResetNewReservation } from './AddReservation.mutations'
+import styles from './AddReservation.styles'
+import LabeledInput from './components/LabeledInput'
 
 const AddReservation: NavigationStackScreenComponent = ({ navigation }) => {
   const { data } = useGetNewReservation()
@@ -53,7 +34,6 @@ const AddReservation: NavigationStackScreenComponent = ({ navigation }) => {
             query: GET_RESERVATIONS,
             variables: { orderBy: ReservationOrderByInput.updatedAt_DESC },
           })
-
           if (queryResult) {
             const { reservations } = queryResult
             cache.writeQuery({
@@ -61,9 +41,7 @@ const AddReservation: NavigationStackScreenComponent = ({ navigation }) => {
               variables: { orderBy: ReservationOrderByInput.updatedAt_DESC },
               data: { reservations: [newReservation, ...reservations] },
             })
-
             resetNewReservation()
-
             navigation.navigate('Reservations')
           }
         },
@@ -86,12 +64,10 @@ const AddReservation: NavigationStackScreenComponent = ({ navigation }) => {
         </View>
       )}
 
-      <TouchableOpacity
+      <PrimaryButton
+        buttonText='Add New Reservation'
         onPress={handleAddReservationClick}
-        style={styles.addReservationButton}
-      >
-        <Text style={styles.buttonText}>Add New Reservation</Text>
-      </TouchableOpacity>
+      />
     </View>
   )
 }

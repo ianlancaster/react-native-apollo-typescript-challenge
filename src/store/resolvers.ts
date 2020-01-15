@@ -1,8 +1,6 @@
 import { ApolloCache } from 'apollo-cache'
 import { Resolvers as BaseResolvers } from 'apollo-client'
-import { GET_NEW_RESERVATION } from 'routes/add-reservation/AddReservation.queries'
-import { GetNewReservationState } from 'routes/add-reservation/graphTypes/GetNewReservationState'
-import defaultClientState from 'store/defaultClientState'
+import addReservationResolvers from 'routes/add-reservation/AddReservation.resolvers'
 
 type ResolverContext = {
   cache: ApolloCache<any>
@@ -14,7 +12,7 @@ type ResolverFn = (
   { cache }: ResolverContext
 ) => any;
 
-interface ResolverMap {
+export interface ResolverMap {
   [field: string]: ResolverFn;
 }
 
@@ -24,48 +22,7 @@ interface Resolvers extends BaseResolvers {
 
 const resolvers: Resolvers = {
   Mutation: {
-    updateNewReservation: (parent, args, context) => {
-      const { target, text } = args
-      const { cache } = context
-      const queryResult = cache.readQuery<GetNewReservationState>({ query: GET_NEW_RESERVATION })
-
-      if (queryResult) {
-        const { screenState } = queryResult
-        const { newReservation } = screenState
-
-        const data = {
-          screenState: {
-            ...screenState,
-            newReservation: {
-              ...newReservation,
-              [target]: text,
-            },
-          },
-        }
-
-        cache.writeQuery({ query: GET_NEW_RESERVATION, data })
-
-        return data.screenState.newReservation
-      }
-    },
-    resetNewReservation: (parent, args, { cache }) => {
-      const queryResult = cache.readQuery<GetNewReservationState>({ query: GET_NEW_RESERVATION })
-
-      if (queryResult) {
-        const { screenState } = queryResult
-
-        const data = {
-          screenState: {
-            ...screenState,
-            newReservation: defaultClientState.AddReservationScreen.newReservation,
-          },
-        }
-
-        cache.writeQuery({ query: GET_NEW_RESERVATION, data })
-
-        return data.screenState.newReservation
-      }
-    },
+    ...addReservationResolvers,
   },
 }
 

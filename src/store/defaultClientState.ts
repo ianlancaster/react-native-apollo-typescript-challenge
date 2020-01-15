@@ -1,15 +1,7 @@
+import addReservationDefaultState from 'routes/add-reservation/AddReservation.defaultState'
+
 const defaultClientState = {
-  AddReservationScreen: {
-    __typename: 'AddReservationScreen',
-    newReservation: {
-      id: '0',
-      hotelName: '',
-      name: '',
-      arrivalDate: '',
-      departureDate: '',
-      __typename: 'Reservation',
-    },
-  },
+  AddReservationScreen: addReservationDefaultState,
 }
 
 export default defaultClientState

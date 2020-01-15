@@ -6,7 +6,7 @@ import {
   UpdateNewReservationVariables,
 } from './graphTypes/updateNewReservation'
 import { ResetNewReservation } from './graphTypes/ResetNewReservation'
-import { CreateReservation, CreateReservationVariables } from 'routes/add-reservation/graphTypes/CreateReservation'
+import { CreateReservation, CreateReservationVariables } from './graphTypes/CreateReservation'
 
 export const UPDATE_NEW_RESERVATION = gql`
   mutation UpdateNewReservation($target: String, $text: String) {

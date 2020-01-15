@@ -1,9 +1,10 @@
 import React from 'react'
-import { FlatList, Text, TouchableOpacity } from 'react-native'
+import { FlatList } from 'react-native'
+import { Reservation } from 'types/models'
 import ReservationCard from 'components/ReservationCard'
+import PrimaryButton from 'components/PrimaryButton'
 import { filterIncompleteReservations } from './Reservations.selectors'
 import styles from './Reservations.styles'
-import { Reservation } from 'types/models'
 import { ReservationsProps } from './Reservations.types'
 
 const Reservations: React.FC<ReservationsProps> = ({
@@ -21,12 +22,10 @@ const Reservations: React.FC<ReservationsProps> = ({
           <ReservationCard {...item} />
         )}
       />
-      <TouchableOpacity
+      <PrimaryButton
         onPress={() => navigation.navigate('AddReservation')}
-        style={styles.addReservationButton}
-      >
-        <Text style={styles.buttonText}>Add New Reservation</Text>
-      </TouchableOpacity>
+        buttonText='Add New Reservation'
+      />
     </>
   )
 }
