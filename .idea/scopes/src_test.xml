@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="src:test" pattern="file[ChallengeRN]:src//*&amp;&amp;!file:*/package.json&amp;&amp;file:*/*test.ts*" />
+</component>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0e162018-c2cc-4376-a853-0166e6773cc0" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="NamedScopeManager">
+    <order>
+      <scope name="src:all" />
+      <scope name="src:code" />
+      <scope name="src:test" />
+    </order>
+  </component>
+  <component name="ProjectId" id="1W8W2N3cwtVUE7g2vG58sXTPzjY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/routes/add-reservation" />
+      <recent name="$PROJECT_DIR$/src/store" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/types" />
+      <recent name="$PROJECT_DIR$/src/models" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Jest.mounts with enzyme correctly">
+    <configuration default="true" type="JavaScriptTestRunnerJest">
+      <config-file value="$PROJECT_DIR$/jest.config.js" />
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mounts with enzyme correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/jest.config.js" />
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/src/components" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/DefaultLoader/DefaultLoader.component.test.tsx" />
+      <test-names>
+        <test-name value="mounts with enzyme correctly" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="renders correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/app/App.test.tsx" />
+      <test-names>
+        <test-name value="renders correctly" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Android" type="ReactNative" factoryName="React Native">
+      <working-dir value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <react-native value="$PROJECT_DIR$/node_modules/react-native" />
+      <platform value="ANDROID" />
+      <envs />
+      <only-packager />
+      <method v="2">
+        <option name="ReactNativePackager" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="iOS" type="ReactNative" factoryName="React Native">
+      <working-dir value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <react-native value="$PROJECT_DIR$/node_modules/react-native" />
+      <platform value="IOS" />
+      <envs />
+      <only-packager />
+      <method v="2">
+        <option name="ReactNativePackager" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Jest.mounts with enzyme correctly" />
+      <item itemvalue="Jest.renders correctly" />
+      <item itemvalue="React Native.Android" />
+      <item itemvalue="React Native.iOS" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.mounts with enzyme correctly" />
+        <item itemvalue="Jest.renders correctly" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0e162018-c2cc-4376-a853-0166e6773cc0" name="Default Changelist" comment="" />
+      <created>1578531493924</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578531493924</updated>
+      <workItem from="1578531496104" duration="4625000" />
+      <workItem from="1578538606988" duration="39432000" />
+      <workItem from="1578860360156" duration="4542000" />
+      <workItem from="1578865133019" duration="79613000" />
+    </task>
+    <task id="LOCAL-00001" summary="Update directory structure.">
+      <created>1578701898284</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578701898284</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Rename bookings to reservations.">
+      <created>1578811198254</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578811198254</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update directory structure." />
+    <MESSAGE value="Rename bookings to reservations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename bookings to reservations." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1680" y="239" key="#ESLint" timestamp="1578538176860">
+      <screen x="-2560" y="-135" width="2560" height="1417" />
+    </state>
+    <state x="-1680" y="239" key="#ESLint/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1578538176860" />
+    <state x="488" y="291" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579077500613">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="-1816" y="235" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1578964132676" />
+    <state x="488" y="291" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1579077500613" />
+    <state x="-1694" y="192" width="812" height="779" key="#com.intellij.ide.util.TreeDirectoryChooserDialog" timestamp="1578977188955">
+      <screen x="-2560" y="-135" width="2560" height="1417" />
+    </state>
+    <state x="-1694" y="192" width="812" height="779" key="#com.intellij.ide.util.TreeDirectoryChooserDialog/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1578977188955" />
+    <state x="-1542" y="327" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578979391842">
+      <screen x="-2560" y="-135" width="2560" height="1417" />
+    </state>
+    <state x="-1542" y="327" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1578979391842" />
+    <state x="-2022" y="-7" width="1478" height="1095" key="CommitChangelistDialog2" timestamp="1578811198094">
+      <screen x="-2560" y="-135" width="2560" height="1417" />
+    </state>
+    <state x="-2022" y="-7" width="1478" height="1095" key="CommitChangelistDialog2/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1578811198094" />
+    <state width="1659" height="385" key="GridCell.Tab.0.bottom" timestamp="1579078955012">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="2539" height="428" key="GridCell.Tab.0.bottom/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579076153435" />
+    <state width="829" height="207" key="GridCell.Tab.0.bottom/-2560.-193.2560.1417/0.23.1680.1027@-2560.-193.2560.1417" timestamp="1579035365825" />
+    <state width="1659" height="385" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1579078955012" />
+    <state width="1659" height="385" key="GridCell.Tab.0.center" timestamp="1579078955011">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="2539" height="428" key="GridCell.Tab.0.center/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579076153434" />
+    <state width="829" height="207" key="GridCell.Tab.0.center/-2560.-193.2560.1417/0.23.1680.1027@-2560.-193.2560.1417" timestamp="1579035365814" />
+    <state width="1659" height="385" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1579078955011" />
+    <state width="1659" height="385" key="GridCell.Tab.0.left" timestamp="1579078955011">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="2539" height="428" key="GridCell.Tab.0.left/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579076153433" />
+    <state width="829" height="207" key="GridCell.Tab.0.left/-2560.-193.2560.1417/0.23.1680.1027@-2560.-193.2560.1417" timestamp="1579035365795" />
+    <state width="1659" height="385" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1579078955011" />
+    <state width="1659" height="385" key="GridCell.Tab.0.right" timestamp="1579078955012">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="2539" height="428" key="GridCell.Tab.0.right/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579076153434" />
+    <state width="829" height="207" key="GridCell.Tab.0.right/-2560.-193.2560.1417/0.23.1680.1027@-2560.-193.2560.1417" timestamp="1579035365824" />
+    <state width="1659" height="385" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1579078955012" />
+    <state width="628" height="295" key="GridCell.Tab.1.bottom" timestamp="1579076295385">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="2539" height="428" key="GridCell.Tab.1.bottom/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579076153436" />
+    <state width="628" height="295" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1579076295385" />
+    <state width="628" height="295" key="GridCell.Tab.1.center" timestamp="1579076295385">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="2539" height="428" key="GridCell.Tab.1.center/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579076153435" />
+    <state width="628" height="295" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1579076295385" />
+    <state width="628" height="295" key="GridCell.Tab.1.left" timestamp="1579076295384">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="2539" height="428" key="GridCell.Tab.1.left/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579076153435" />
+    <state width="628" height="295" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1579076295384" />
+    <state width="628" height="295" key="GridCell.Tab.1.right" timestamp="1579076295385">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="2539" height="428" key="GridCell.Tab.1.right/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579076153436" />
+    <state width="628" height="295" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1579076295385" />
+    <state width="628" height="295" key="GridCell.Tab.2.bottom" timestamp="1579076295386">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="2539" height="428" key="GridCell.Tab.2.bottom/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579076153437" />
+    <state width="628" height="295" key="GridCell.Tab.2.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1579076295386" />
+    <state width="628" height="295" key="GridCell.Tab.2.center" timestamp="1579076295385">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="2539" height="428" key="GridCell.Tab.2.center/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579076153436" />
+    <state width="628" height="295" key="GridCell.Tab.2.center/0.23.1680.1027@0.23.1680.1027" timestamp="1579076295385" />
+    <state width="628" height="295" key="GridCell.Tab.2.left" timestamp="1579076295385">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="2539" height="428" key="GridCell.Tab.2.left/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579076153436" />
+    <state width="628" height="295" key="GridCell.Tab.2.left/0.23.1680.1027@0.23.1680.1027" timestamp="1579076295385" />
+    <state width="628" height="295" key="GridCell.Tab.2.right" timestamp="1579076295386">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="2539" height="428" key="GridCell.Tab.2.right/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579076153437" />
+    <state width="628" height="295" key="GridCell.Tab.2.right/0.23.1680.1027@0.23.1680.1027" timestamp="1579076295386" />
+    <state width="628" height="295" key="GridCell.Tab.3.bottom" timestamp="1579076295387">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="2539" height="428" key="GridCell.Tab.3.bottom/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579076153438" />
+    <state width="628" height="295" key="GridCell.Tab.3.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1579076295387" />
+    <state width="628" height="295" key="GridCell.Tab.3.center" timestamp="1579076295386">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="2539" height="428" key="GridCell.Tab.3.center/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579076153438" />
+    <state width="628" height="295" key="GridCell.Tab.3.center/0.23.1680.1027@0.23.1680.1027" timestamp="1579076295386" />
+    <state width="628" height="295" key="GridCell.Tab.3.left" timestamp="1579076295386">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="2539" height="428" key="GridCell.Tab.3.left/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579076153437" />
+    <state width="628" height="295" key="GridCell.Tab.3.left/0.23.1680.1027@0.23.1680.1027" timestamp="1579076295386" />
+    <state width="628" height="295" key="GridCell.Tab.3.right" timestamp="1579076295387">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="2539" height="428" key="GridCell.Tab.3.right/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579076153438" />
+    <state width="628" height="295" key="GridCell.Tab.3.right/0.23.1680.1027@0.23.1680.1027" timestamp="1579076295387" />
+    <state x="-1483" y="291" key="RollbackChangesDialog" timestamp="1579047145242">
+      <screen x="-2560" y="-135" width="2560" height="1417" />
+    </state>
+    <state x="-1483" y="291" key="RollbackChangesDialog/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579047145242" />
+    <state x="-1771" y="212" key="SettingsEditor" timestamp="1579057485239">
+      <screen x="-2560" y="-135" width="2560" height="1417" />
+    </state>
+    <state x="-1771" y="212" key="SettingsEditor/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579057485239" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1578972717120">
+      <screen x="-2560" y="-135" width="2560" height="1417" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1578972717120" />
+    <state x="321" y="156" width="1069" height="664" key="find.popup" timestamp="1579076819522">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="-2071" y="48" width="1628" height="916" key="find.popup/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579049730949" />
+    <state x="321" y="156" width="1069" height="664" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1579076819522" />
+    <state x="-1615" y="267" width="670" height="675" key="run.anything.popup" timestamp="1578704031021">
+      <screen x="-2560" y="-135" width="2560" height="1417" />
+    </state>
+    <state x="-1615" y="267" width="670" height="675" key="run.anything.popup/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1578704031021" />
+    <state x="370" y="195" key="scopes" timestamp="1579079823595">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="-1654" y="169" key="scopes/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1578862046661" />
+    <state x="370" y="195" key="scopes/0.23.1680.1027@0.23.1680.1027" timestamp="1579079823595" />
+    <state x="-1790" y="178" width="1021" height="933" key="search.everywhere.popup" timestamp="1579054304110">
+      <screen x="-2560" y="-135" width="2560" height="1417" />
+    </state>
+    <state x="-1790" y="178" width="1021" height="933" key="search.everywhere.popup/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579054304110" />
+    <state x="-1790" y="120" width="1021" height="933" key="search.everywhere.popup/-2560.-193.2560.1417/0.23.1680.1027@-2560.-193.2560.1417" timestamp="1579034316003" />
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1578989073220" />
+  </component>
+</project>
