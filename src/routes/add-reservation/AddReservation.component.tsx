@@ -13,6 +13,7 @@ import { useGetNewReservation } from './AddReservation.queries'
 import { useCreateReservation, useResetNewReservation } from './AddReservation.mutations'
 import styles from './AddReservation.styles'
 import LabeledInput from './components/LabeledInput'
+import DatePicker from './components/DatePicker'
 
 const AddReservation: NavigationStackScreenComponent = ({ navigation }) => {
   const { data } = useGetNewReservation()
@@ -54,8 +55,8 @@ const AddReservation: NavigationStackScreenComponent = ({ navigation }) => {
       <View>
         <LabeledInput label='Hotel Name' target='hotelName' newReservation={newReservation} />
         <LabeledInput label='Name' target='name' newReservation={newReservation} />
-        <LabeledInput label='Arrival Date' target='arrivalDate' newReservation={newReservation} />
-        <LabeledInput label='Departure Date' target='departureDate' newReservation={newReservation} />
+        <DatePicker label='Arrival Date' target='arrivalDate' newReservation={newReservation} />
+        <DatePicker label='Departure Date' target='departureDate' newReservation={newReservation} />
       </View>
 
       {showError && (

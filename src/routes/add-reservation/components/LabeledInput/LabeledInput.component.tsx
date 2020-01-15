@@ -4,7 +4,7 @@ import { useUpdateNewReservation } from 'routes/add-reservation/AddReservation.m
 import { Text, TextInput, View } from 'react-native'
 import styles from './LabeledInput.styles'
 
-type Target = 'hotelName' | 'name' | 'arrivalDate' | 'departureDate'
+type Target = 'hotelName' | 'name'
 type LabeledInputProps = { label: string, target: Target, newReservation: Reservation }
 
 const LabeledInput = ({

@@ -11,17 +11,16 @@ const styles = StyleSheet.create({
     marginTop: 10,
     color: headingColor,
   },
-  textInput: {
-    fontSize: 18,
-    textAlign: 'center',
-    margin: 10,
-    paddingHorizontal: 10,
-    paddingVertical: 10,
-    borderWidth: 1,
+  datePicker: {
+    width: '100%',
+  },
+  dateInput: {
+    backgroundColor: 'white',
     borderRadius: 4,
     borderColor: 'gray',
-    backgroundColor: 'white',
   },
+  dateText: { fontSize: 18 },
+  placeholderText: { fontSize: 18 },
 })
 
 export default styles
