@@ -13,12 +13,12 @@ describe('App.component', () => {
     renderer.create(<App />)
   })
 
-  it('Should start on the Reservations route with a header tite of "Reservations"', () => {
-    expect(wrapper.find('HeaderSegment'))
-      .toHaveProp({ title: 'Reservations' })
-  })
-
   it('mounts with enzyme correctly', () => {
     expect(wrapper).toExist()
+  })
+
+  it('Should start on the Reservations route with a header title of "Reservations"', () => {
+    expect(wrapper.find('HeaderSegment'))
+      .toHaveProp({ title: 'Reservations' })
   })
 })
