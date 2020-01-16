@@ -14,7 +14,11 @@ describe('Reservations.component', () => {
     />,
   )
 
-  it('should render a primary button component with the text "Add New Reservation', () => {
-    expect(wrapper.find('PrimaryButton')).toExist()
+  it('should render a primary button with the text "Add New Reservation" that navigates to the appropriate route', () => {
+    const PrimaryButton: any = wrapper.find('PrimaryButton')
+    expect(PrimaryButton).toExist()
+    expect(PrimaryButton).toHaveText('Add New Reservation')
+    PrimaryButton.props().onPress()
+    expect(mockNavigation.navigate).toHaveBeenCalledWith('AddReservation')
   })
 })
