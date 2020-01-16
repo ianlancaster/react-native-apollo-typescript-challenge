@@ -51,6 +51,8 @@
       "store/*": ["src/store/*"],
       "styles": ["src/styles"],
       "styles/*": ["src/styles/*"],
+      "test": ["src/test"],
+      "test/*": ["src/test/*"],
       "types": ["src/types"],
       "types/*": ["src/types/*"]
     },                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
