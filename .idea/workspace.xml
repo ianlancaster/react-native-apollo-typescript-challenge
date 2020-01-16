@@ -4,7 +4,6 @@
     <list default="true" id="0e162018-c2cc-4376-a853-0166e6773cc0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/reservations/Reservations.component.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/reservations/Reservations.component.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/testHelpers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/testHelpers.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +170,7 @@
       <workItem from="1578860360156" duration="4542000" />
       <workItem from="1578865133019" duration="84661000" />
       <workItem from="1579136550047" duration="3738000" />
-      <workItem from="1579201630076" duration="3917000" />
+      <workItem from="1579201630076" duration="4784000" />
     </task>
     <task id="LOCAL-00001" summary="Update directory structure.">
       <created>1578701898284</created>
@@ -325,10 +324,10 @@
       <screen x="-2560" y="-135" width="2560" height="1417" />
     </state>
     <state x="-1615" y="267" width="670" height="675" key="run.anything.popup/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1578704031021" />
-    <state x="370" y="195" key="scopes" timestamp="1579079823595">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="-1654" y="169" key="scopes" timestamp="1579206472700">
+      <screen x="-2560" y="-135" width="2560" height="1417" />
     </state>
-    <state x="-1654" y="169" key="scopes/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1578862046661" />
+    <state x="-1654" y="169" key="scopes/-2560.-135.2560.1417/-3259.1305.1680.922/0.23.1680.1027@-2560.-135.2560.1417" timestamp="1579206472700" />
     <state x="370" y="195" key="scopes/0.23.1680.1027@0.23.1680.1027" timestamp="1579079823595" />
     <state x="-1790" y="178" width="1021" height="933" key="search.everywhere.popup" timestamp="1579138152289">
       <screen x="-2560" y="-135" width="2560" height="1417" />
